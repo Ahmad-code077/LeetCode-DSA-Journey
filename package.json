@@ -1,0 +1,25 @@
+{
+  "name": "leetcode-dsa-journey",
+  "version": "1.0.0",
+  "description": "My public journey of solving LeetCode problems and learning DSA with TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node PascalsTriangle.ts",
+    "build": "tsc",
+    "dev": "ts-node"
+  },
+  "keywords": [
+    "leetcode",
+    "dsa",
+    "typescript",
+    "algorithms",
+    "practice"
+  ],
+  "author": "Ahmad",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
