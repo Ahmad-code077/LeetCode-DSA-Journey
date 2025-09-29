@@ -70,21 +70,23 @@ or either you can change the package.json start command
 
 ## 📂 Project Structure
 
+```bash
 LeetCode-DSA-Journey/
 │
 ├── TwoSum/
-│ ├── TwoSum.md # Problem description, approach, complexity
-│ └── TwoSum.ts # Solution in TypeScript
+│   ├── TwoSum.md          # Problem description, approach, complexity
+│   └── TwoSum.ts          # Solution in TypeScript
 │
 ├── PascalsTriangle/
-│ ├── PascalsTriangle.md # Notes and explanation
-│ └── PascalsTriangle.ts # Solution in TypeScript
+│   ├── PascalsTriangle.md # Notes and explanation
+│   └── PascalsTriangle.ts # Solution in TypeScript
 │
 ├── ValidParentheses/
-│ ├── ValidParentheses.md # Notes and explanation
-│ └── ValidParentheses.ts # Solution in TypeScript
+│   ├── ValidParentheses.md # Notes and explanation
+│   └── ValidParentheses.ts # Solution in TypeScript
 │
 ├── package.json
 ├── tsconfig.json
 ├── .gitignore
 └── README.md
+```
