@@ -1,11 +1,11 @@
-class ListNode {
-    val: number
-    next: ListNode | null
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = (val === undefined ? 0 : val)
-        this.next = (next === undefined ? null : next)
-    }
-}
+// class ListNode {
+//     val: number
+//     next: ListNode | null
+//     constructor(val?: number, next?: ListNode | null) {
+//         this.val = (val === undefined ? 0 : val)
+//         this.next = (next === undefined ? null : next)
+//     }
+// }
 
 
 // function hasCycle(head: ListNode | null): boolean {
@@ -52,19 +52,20 @@ function hasCycle(head: ListNode | null): boolean {
 
     return false
 };
-const n1 = new ListNode(1)
-const n2 = new ListNode(2)
-const n3 = new ListNode(3)
-const n4 = new ListNode(4)
-const n5 = new ListNode(5)
 
-n1.next = n2
-n2.next = n3
-n3.next = n4
-n4.next = n5
-n5.next = n3               // cycle here
+// const n1 = new ListNode(1)
+// const n2 = new ListNode(2)
+// const n3 = new ListNode(3)
+// const n4 = new ListNode(4)
+// const n5 = new ListNode(5)
 
-console.log(hasCycle(n1))  // expected: true
+// n1.next = n2
+// n2.next = n3
+// n3.next = n4
+// n4.next = n5
+// n5.next = n3               // cycle here
+
+// console.log(hasCycle(n1))  // expected: true
 
 
 // const b1 = new ListNode(1)
