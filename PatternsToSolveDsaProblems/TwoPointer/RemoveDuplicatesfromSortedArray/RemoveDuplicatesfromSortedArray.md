@@ -1,40 +1,52 @@
-# 4. Remove Duplicates from Sorted Array
+# Problem: Remove Duplicates from Sorted Array
 
 ## 📖 Description
 
-Given a **sorted** array `nums`, remove the duplicates **in-place** so that each unique element appears **only once**.
+Given a **sorted array** `nums`, remove the **duplicates in-place** such that each element appears only once.  
+Return the **new length** of the array after duplicates are removed.
 
-Return the number of unique elements `k`.  
-After the function runs, the first `k` elements of `nums` should contain the unique values in order.
-
-The values beyond `k` can be ignored.
-
----
-
-## 🔢 Example
-
-**Input:**  
-nums = [1,1,2]
-
-**Output:**  
-2  
-Updated array → [1,2,_]
+- Do not allocate extra space for another array.
+- You must do this **in-place** with O(1) extra memory.
 
 ---
 
-## 🔒 Constraints
+## 🔢 Input Examples
 
-- `1 <= nums.length <= 100000`
-- `-10^4 <= nums[i] <= 10^4`
-- `nums` is sorted in **non-decreasing** order
-- Your algorithm must run in **O(n)** time and use **O(1)** extra space
+**Example 1:**  
+Input: `nums = [1,1,2]`  
+Output: `2`  
+Explanation: The array becomes `[1,2,_]` (the underscores are irrelevant).
+
+**Example 2:**  
+Input: `nums = [0,0,1,1,1,2,2,3,3,4]`  
+Output: `5`  
+Explanation: The array becomes `[0,1,2,3,4,_,_,_,_,_]`.
+
+**Example 3:**  
+Input: `nums = [1,1,2,2,3,3]`  
+Output: `3`  
+Explanation: The array becomes `[1,2,3,_,_,_]`.
 
 ---
 
-## 🧑‍💻 Function
+## 🛠️ Approach (Two Pointers)
 
-```ts
-function removeDuplicates(nums: number[]): number {
-  // your code here
-}
-```
+1. Initialize a `write` pointer at index `0`. This marks the position where the next **unique value** will be written.
+2. Iterate through the array with a `read` pointer starting from index `1`.
+3. For each `read` position:
+   - If `nums[write] !== nums[read]`, increment `write` and copy `nums[read]` to `nums[write]`.
+   - Otherwise, continue to the next element.
+4. After finishing, return `write + 1` as the **new length** of the array.
+
+**Why this works:**
+
+- The array is sorted, so duplicates are consecutive
+- The `write` pointer ensures that each unique element is placed in order
+- This method uses constant extra space
+
+---
+
+## ⏱️ Complexity
+
+- **Time Complexity:** O(n) — Each element is visited once
+- **Space Complexity:** O(1) — Only two pointers are used
